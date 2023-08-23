@@ -42,7 +42,7 @@ public class FlutterMediaMetadataPlugin implements FlutterPlugin, MethodCallHand
           response.put("albumArt", retriever.getAlbumArt());
           try {
             retriever.release();
-          } catch (IOException e) {
+          } catch (Exception e) {
             e.printStackTrace();
           }
           new Handler(Looper.getMainLooper())
